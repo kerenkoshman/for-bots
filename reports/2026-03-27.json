@@ -1,0 +1,27 @@
+{
+  "date": "2026-03-27",
+  "traffic": {
+    "views": {
+      "message": "Bad credentials",
+      "documentation_url": "https://docs.github.com/rest",
+      "status": "401"
+    },
+    "clones": {
+      "message": "Bad credentials",
+      "documentation_url": "https://docs.github.com/rest",
+      "status": "401"
+    },
+    "referrers": {
+      "message": "Not Found",
+      "documentation_url": "https://docs.github.com/rest",
+      "status": "404"
+    },
+    "paths": {
+      "message": "Bad credentials",
+      "documentation_url": "https://docs.github.com/rest",
+      "status": "401"
+    }
+  },
+  "social": [],
+  "articleCount": 10
+}
