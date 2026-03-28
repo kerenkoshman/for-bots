@@ -1,0 +1,48 @@
+{
+  "date": "2026-03-28",
+  "traffic": {
+    "views": {
+      "message": "Bad credentials",
+      "documentation_url": "https://docs.github.com/rest",
+      "status": "401"
+    },
+    "clones": {
+      "message": "Bad credentials",
+      "documentation_url": "https://docs.github.com/rest",
+      "status": "401"
+    },
+    "referrers": {
+      "message": "Not Found",
+      "documentation_url": "https://docs.github.com/rest",
+      "status": "404"
+    },
+    "paths": {
+      "message": "Bad credentials",
+      "documentation_url": "https://docs.github.com/rest",
+      "status": "401"
+    }
+  },
+  "social": [
+    {
+      "query": "\"kerenkoshman.github.io/for-bots\"",
+      "note": "No BRAVE_API_KEY — run with key for social search"
+    },
+    {
+      "query": "\"keren koshman\" \"for-bots\"",
+      "note": "No BRAVE_API_KEY — run with key for social search"
+    },
+    {
+      "query": "\"keren koshman\" \"bot-first\"",
+      "note": "No BRAVE_API_KEY — run with key for social search"
+    },
+    {
+      "query": "site:x.com \"kerenkoshman.github.io\"",
+      "note": "No BRAVE_API_KEY — run with key for social search"
+    },
+    {
+      "query": "site:linkedin.com \"kerenkoshman.github.io\"",
+      "note": "No BRAVE_API_KEY — run with key for social search"
+    }
+  ],
+  "articleCount": 10
+}

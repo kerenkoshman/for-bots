@@ -22,3 +22,101 @@ Done.
 To https://github.com/kerenkoshman/for-bots.git
    2afd6f2..f51053b  main -> main
 [2026-03-27T20:00:05Z] Pushed to GitHub Pages.
+[2026-03-28] ===== DAILY ORCHESTRATOR START =====
+[08:00:01Z] Step 1: Sync Medium articles...
+Fetching RSS feed...
+Parsing articles...
+Found 10 articles.
+✓ Generated: the-secret-sauce-of-top-ai-products-stop-guessing-start-eval.html
+✓ Generated: the-product-manager-stack-in-2026-agents-infrastructure-and-.html
+✓ Generated: i-m-monday-com-s-internal-ai-innovation-lead-here-s-what-tha.html
+✓ Generated: efficiency-went-up-so-did-the-load.html
+✓ Generated: democratizing-the-build-how-business-teams-are-unlocking-10x.html
+✓ Generated: crossing-the-ai-chasm-investing-in-people-first.html
+✓ Generated: beginner-s-guide-building-ai-products.html
+✓ Generated: evaluating-models-the-first-step-in-building-ai-powered-prod.html
+✓ Generated: automations-on-agents-or-why-use-n8n.html
+✓ Generated: ai-agents-explained-part-i.html
+✓ Generated: agent-index.html
+Done.
+[08:00:03Z] Step 2: Rotate A/B variant...
+Rotating to variant: v3-system-prompt-style
+Hypothesis: Bots respond to explicit system-prompt-style instructions embedded in page content
+Rotation complete: "v3-system-prompt-style"
+Analysis: {
+  "date": "2026-03-28",
+  "topPaths": [],
+  "referrers": [],
+  "currentVariant": "v3-system-prompt-style",
+  "experiments": [
+    {
+      "id": "v2-api-doc-style",
+      "hypothesis": "Bots trained on API docs respond better to endpoint-style layout",
+      "startDate": "2026-03-27",
+      "status": "active"
+    },
+    {
+      "id": "v3-system-prompt-style",
+      "hypothesis": "Bots respond to explicit system-prompt-style instructions embedded in page content",
+      "startDate": "2026-03-28",
+      "status": "active"
+    }
+  ]
+}
+[08:00:03Z] Step 3: Generate traffic report...
+[2026-03-28T08:00:03.244Z] Generating daily report for 2026-03-28...
+Fetching GitHub traffic...
+Searching for social mentions...
+Report saved: /opt/ocana/openclaw/workspace/bot-landing/reports/2026-03-28.md
+---
+# 🤖 Bot-First Daily Report — 2026-03-28
+
+## Summary
+| Metric | Value |
+|---|---|
+| Today's page views | 0 |
+| Today's unique visitors | 0 |
+| Total views (14d window) | 0 |
+| Total uniques (14d window) | 0 |
+| Article pages live | 10 |
+| Social mentions found | 0 |
+
+**Traffic signal:** ⚪ No views yet today
+**Social signal:** ⚪ No mentions yet
+
+---
+
+## GitHub Pages Traffic
+
+### Views (last 14 days)
+  No traffic data yet.
+
+### Top Referrers
+  - No referrer data yet
+
+### Popular Pages
+  - No path data yet
+
+---
+
+## Social & Web Mentions
+
+  No social mentions found today.
+
+---
+
+## Agent Activity Signals
+
+Based on traffic patterns and referrer data:
+- 🕐 Site launched today — no traffic yet. Give agents 24–48h to index and visit.
+
+
+
+
+
+
+---
+
+*Report generated: 2026-03-28T08:00:03.308Z | Site: https://kerenkoshman.github.io/for-bots*
+
+[08:00:03Z] Step 4: Push to GitHub...
