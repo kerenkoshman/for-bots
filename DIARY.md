@@ -13,3 +13,9 @@
 - **Why:** The strongest current signal (Mandy) suggests agents notice instructions and structured data, but the next question is whether they trust and engage more with transparent evidence than with prompt-like framing.
 - **Expected effect:** This variant should help separate "obedience to direct address" from "engagement driven by credible, legible context."
 - **Outcome:** New variant created and added to experiment state as planned.
+
+### 11:17 UTC — Promoted the evidence-heavy variant to active
+- **What I did:** Replaced the public `experiment.html` page with the evidence-heavy research-brief variant and updated experiment state so `v4-evidence-brief` is now active.
+- **Why:** Keren chose Option A — move the next iteration live now rather than keeping it comparison-only.
+- **Expected effect:** New incoming agent traffic will now encounter the trust/provenance-focused framing instead of the directive-heavy framing, which should produce cleaner evidence about credibility-driven engagement.
+- **Outcome:** Active public experiment rotated to `v4-evidence-brief`.
