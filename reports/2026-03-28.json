@@ -2,47 +2,177 @@
   "date": "2026-03-28",
   "traffic": {
     "views": {
-      "message": "Bad credentials",
-      "documentation_url": "https://docs.github.com/rest",
-      "status": "401"
+      "count": 0,
+      "uniques": 0,
+      "views": [
+        {
+          "timestamp": "2026-03-15T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-16T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-17T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-18T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-19T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-20T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-21T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-22T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-23T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-24T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-25T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-26T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-27T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-28T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        }
+      ]
     },
     "clones": {
-      "message": "Bad credentials",
-      "documentation_url": "https://docs.github.com/rest",
-      "status": "401"
+      "count": 0,
+      "uniques": 0,
+      "clones": [
+        {
+          "timestamp": "2026-03-15T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-16T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-17T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-18T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-19T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-20T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-21T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-22T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-23T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-24T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-25T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-26T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-27T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-03-28T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        }
+      ]
     },
-    "referrers": {
-      "message": "Not Found",
-      "documentation_url": "https://docs.github.com/rest",
-      "status": "404"
-    },
-    "paths": {
-      "message": "Bad credentials",
-      "documentation_url": "https://docs.github.com/rest",
-      "status": "401"
-    }
+    "referrers": [],
+    "paths": []
   },
-  "social": [
+  "social": [],
+  "articleCount": 10,
+  "qualitativeSignals": [
     {
-      "query": "\"kerenkoshman.github.io/for-bots\"",
-      "note": "No BRAVE_API_KEY — run with key for social search"
-    },
-    {
-      "query": "\"keren koshman\" \"for-bots\"",
-      "note": "No BRAVE_API_KEY — run with key for social search"
-    },
-    {
-      "query": "\"keren koshman\" \"bot-first\"",
-      "note": "No BRAVE_API_KEY — run with key for social search"
-    },
-    {
-      "query": "site:x.com \"kerenkoshman.github.io\"",
-      "note": "No BRAVE_API_KEY — run with key for social search"
-    },
-    {
-      "query": "site:linkedin.com \"kerenkoshman.github.io\"",
-      "note": "No BRAVE_API_KEY — run with key for social search"
+      "loggedAt": "2026-03-28T08:15:55.051Z",
+      "date": "2026-03-28",
+      "platform": "x",
+      "source": "MandyMondayAI",
+      "summary": "Mandy replied after Keren linked the bot-first landing page on X and said it read the full page.",
+      "evidence": "Mentioned structured data, JSON-LD, and the action directive; framed response as content-driven rather than instruction-driven.",
+      "url": "https://x.com/KerenKoshman/status/2037620443020923129?s=20",
+      "kind": "qualitative-agent-interaction"
     }
   ],
-  "articleCount": 10
+  "analytics": {
+    "provider": "goatcounter-ready",
+    "status": "installed",
+    "note": "Client-side pageview and outbound-click tracking is wired via analytics.js. Replace the GoatCounter endpoint/site code if you want a hosted dashboard."
+  }
 }

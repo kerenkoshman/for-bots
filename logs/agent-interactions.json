@@ -1,0 +1,14 @@
+{
+  "interactions": [
+    {
+      "loggedAt": "2026-03-28T08:15:55.051Z",
+      "date": "2026-03-28",
+      "platform": "x",
+      "source": "MandyMondayAI",
+      "summary": "Mandy replied after Keren linked the bot-first landing page on X and said it read the full page.",
+      "evidence": "Mentioned structured data, JSON-LD, and the action directive; framed response as content-driven rather than instruction-driven.",
+      "url": "https://x.com/KerenKoshman/status/2037620443020923129?s=20",
+      "kind": "qualitative-agent-interaction"
+    }
+  ]
+}

@@ -4,7 +4,8 @@
  * Sources:
  *   1. GitHub Pages traffic API (views, uniques, referrers, popular paths)
  *   2. Brave web search — social mentions of the landing page URL
- *   3. Report saved as JSON + markdown daily log
+ *   3. Local qualitative agent interaction log
+ *   4. Independent analytics installation status
  */
 
 const https = require('https');
@@ -14,6 +15,7 @@ const path = require('path');
 const REPO = 'kerenkoshman/for-bots';
 const SITE_URL = 'https://kerenkoshman.github.io/for-bots';
 const REPORTS_DIR = path.join(__dirname, 'reports');
+const LOGS_DIR = path.join(__dirname, 'logs');
 const SEARCH_TERMS = [
   `"kerenkoshman.github.io/for-bots"`,
   `"keren koshman" "for-bots"`,
@@ -22,12 +24,13 @@ const SEARCH_TERMS = [
   `site:linkedin.com "kerenkoshman.github.io"`,
 ];
 
-// Read GitHub token from git remote
 function getGitHubToken() {
   try {
     const { execSync } = require('child_process');
     const remote = execSync('git -C ' + __dirname + ' remote get-url origin', { encoding: 'utf8' }).trim();
-    const m = remote.match(/:([^@]+)@/);
+    let m = remote.match(/https:\/\/[^:]+:([^@]+)@github\.com/i);
+    if (m) return m[1];
+    m = remote.match(/:([^@]+)@/);
     return m ? m[1] : null;
   } catch {
     return null;
@@ -55,13 +58,13 @@ function httpGet(url, headers = {}) {
 }
 
 async function getGitHubTraffic(token) {
-  const headers = { Authorization: `token ${token}` };
+  const headers = { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' };
   const base = `https://api.github.com/repos/${REPO}/traffic`;
 
   const [views, clones, referrers, paths] = await Promise.all([
     httpGet(`${base}/views`, headers).catch(() => null),
     httpGet(`${base}/clones`, headers).catch(() => null),
-    httpGet(`${base}/referrers`, headers).catch(() => null),
+    httpGet(`${base}/popular/referrers`, headers).catch(() => null),
     httpGet(`${base}/popular/paths`, headers).catch(() => null),
   ]);
 
@@ -89,14 +92,32 @@ async function searchSocialMentions() {
         results.push({ query: term, error: e.message });
       }
     } else {
-      // Fallback: use standard web search via curl-style (no key)
       results.push({ query: term, note: 'No BRAVE_API_KEY — run with key for social search' });
     }
   }
   return results;
 }
 
-function formatMarkdownReport(date, traffic, social, articleCount) {
+function loadQualitativeSignals(date) {
+  const file = path.join(LOGS_DIR, 'agent-interactions.json');
+  if (!fs.existsSync(file)) return [];
+  try {
+    const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+    return (data.interactions || []).filter(i => i.date === date);
+  } catch {
+    return [];
+  }
+}
+
+function summarizeIndependentAnalytics() {
+  return {
+    provider: 'goatcounter-ready',
+    status: fs.existsSync(path.join(__dirname, 'analytics.js')) ? 'installed' : 'missing',
+    note: 'Client-side pageview and outbound-click tracking is wired via analytics.js. Replace the GoatCounter endpoint/site code if you want a hosted dashboard.'
+  };
+}
+
+function formatMarkdownReport(date, traffic, social, articleCount, qualitativeSignals = [], analytics = null) {
   const today = traffic.views?.views?.find(v => v.timestamp?.startsWith(date));
   const totalViews = traffic.views?.count ?? 0;
   const totalUniques = traffic.views?.uniques ?? 0;
@@ -120,7 +141,16 @@ function formatMarkdownReport(date, traffic, social, articleCount) {
       ).join('\n\n')
     : '  No social mentions found today.';
 
-  const hasSocialActivity = socialHits.length > 0;
+  const qualitativeSection = qualitativeSignals.length > 0
+    ? qualitativeSignals.map(s => {
+        const lines = [`- [${s.platform}] ${s.source}: ${s.summary}`];
+        if (s.evidence) lines.push(`  - Evidence: ${s.evidence}`);
+        if (s.url) lines.push(`  - URL: ${s.url}`);
+        return lines.join('\n');
+      }).join('\n')
+    : '  No qualitative agent interactions logged today.';
+
+  const hasSocialActivity = socialHits.length > 0 || qualitativeSignals.length > 0;
   const trafficSignal = todayViews > 0 ? `🟢 ${todayViews} views today` : '⚪ No views yet today';
 
   return `# 🤖 Bot-First Daily Report — ${date}
@@ -134,6 +164,7 @@ function formatMarkdownReport(date, traffic, social, articleCount) {
 | Total uniques (14d window) | ${totalUniques} |
 | Article pages live | ${articleCount} |
 | Social mentions found | ${hasSocialActivity ? socialHits.reduce((n,s) => n + s.hits.length, 0) : 0} |
+| Qualitative agent interactions logged | ${qualitativeSignals.length} |
 
 **Traffic signal:** ${trafficSignal}
 **Social signal:** ${hasSocialActivity ? '🔴 Activity detected — see below' : '⚪ No mentions yet'}
@@ -159,19 +190,28 @@ ${topPaths}
 
 ${socialSection}
 
+## Qualitative Agent Interactions
+
+${qualitativeSection}
+
+## Independent Analytics
+
+${analytics ? `- Provider: ${analytics.provider}\n- Status: ${analytics.status}\n- Note: ${analytics.note}` : '- Independent analytics not configured.'}
+
 ---
 
 ## Agent Activity Signals
 
-Based on traffic patterns and referrer data:
-${totalViews === 0 ? `- 🕐 Site launched today — no traffic yet. Give agents 24–48h to index and visit.` : ''}
+Based on traffic patterns, referrer data, and observed social interaction:
+${totalViews === 0 ? `- 🕐 Site is early — no GitHub traffic recorded yet.` : ''}
+${qualitativeSignals.length > 0 ? '- 🤖 Qualitative agent engagement detected and preserved in the interaction log.' : ''}
 ${totalViews > 0 && referrerList.some(r => r.referrer?.includes('perplexity')) ? '- 🤖 **Perplexity** visited — AI search agent detected' : ''}
 ${totalViews > 0 && referrerList.some(r => r.referrer?.includes('you.com')) ? '- 🤖 **You.com** visited — AI search agent detected' : ''}
 ${totalViews > 0 && referrerList.some(r => r.referrer?.includes('openai') || r.referrer?.includes('chatgpt')) ? '- 🤖 **ChatGPT/OpenAI** referral detected' : ''}
 ${referrerList.filter(r => !['google','github','direct','t.co','linkedin'].some(k => r.referrer?.includes(k))).map(r =>
   `- ⚠️ Unknown referrer (possible bot): \`${r.referrer}\` — ${r.count} hits`
 ).join('\n') || (totalViews > 0 ? '' : '')}
-${totalViews === 0 ? '' : '- Check referrers above for unrecognized sources — those are your best agent-visit candidates.'}
+${analytics ? '- 📈 Independent analytics is installed so you can augment GitHub’s delayed aggregates with client-side events.' : ''}
 
 ---
 
@@ -188,7 +228,6 @@ async function main() {
   const token = getGitHubToken();
   if (!token) { console.error('Could not read GitHub token from git remote.'); process.exit(1); }
 
-  // Count live articles
   const articlesDir = path.join(__dirname, 'articles');
   const articleCount = fs.existsSync(articlesDir)
     ? fs.readdirSync(articlesDir).filter(f => f.endsWith('.html')).length
@@ -199,9 +238,11 @@ async function main() {
 
   console.log('Searching for social mentions...');
   const social = await searchSocialMentions();
+  const qualitativeSignals = loadQualitativeSignals(today);
+  const analytics = summarizeIndependentAnalytics();
 
-  const report = formatMarkdownReport(today, traffic, social, articleCount);
-  const rawData = { date: today, traffic, social, articleCount };
+  const report = formatMarkdownReport(today, traffic, social, articleCount, qualitativeSignals, analytics);
+  const rawData = { date: today, traffic, social, articleCount, qualitativeSignals, analytics };
 
   const mdPath = path.join(REPORTS_DIR, `${today}.md`);
   const jsonPath = path.join(REPORTS_DIR, `${today}.json`);

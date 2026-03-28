@@ -27,7 +27,11 @@ node ab-test.js >> "$LOG" 2>&1
 echo "[$(date -u +%H:%M:%SZ)] Step 3: Generate traffic report..." >> "$LOG"
 node daily-report.js >> "$LOG" 2>&1
 
-# 4. Push to GitHub Pages
+# 4. Regenerate public results page
+echo "[$(date -u +%H:%M:%SZ)] Step 4: Regenerate results page..." >> "$LOG"
+node results.js >> "$LOG" 2>&1
+
+# 5. Push to GitHub Pages
 echo "[$(date -u +%H:%M:%SZ)] Step 4: Push to GitHub..." >> "$LOG"
 git add -A
 if git diff --cached --quiet; then
@@ -38,7 +42,7 @@ else
   echo "[$(date -u +%H:%M:%SZ)] Pushed." >> "$LOG"
 fi
 
-# 5. Write summary for HEARTBEAT pickup
+# 6. Write summary for HEARTBEAT pickup
 REPORT_FILE="$DIR/reports/${TODAY}.md"
 AB_STATE=$(node -e "const s=require('./ab-state.json'); console.log(s.currentVariant || 'unknown')" 2>/dev/null || echo "unknown")
 
@@ -46,6 +50,7 @@ if [ -f "$REPORT_FILE" ]; then
   VIEWS=$(grep "Today's page views" "$REPORT_FILE" | grep -oP '\d+' | head -1 || echo "0")
   UNIQUES=$(grep "Today's unique visitors" "$REPORT_FILE" | grep -oP '\d+' | head -1 || echo "0")
   SOCIAL=$(grep "Social mentions found" "$REPORT_FILE" | grep -oP '\d+' | head -1 || echo "0")
+  QUAL=$(grep "Qualitative agent interactions logged" "$REPORT_FILE" | grep -oP '\d+' | head -1 || echo "0")
   SIGNAL=$(grep "Traffic signal" "$REPORT_FILE" | sed 's/.*Traffic signal: //' || echo "no data")
   SOCIAL_SIGNAL=$(grep "Social signal" "$REPORT_FILE" | sed 's/.*Social signal: //' || echo "no data")
 else
@@ -59,6 +64,7 @@ cat > "$DIR/DAILY_SUMMARY.md" << SUMMARY
 - Views today: ${VIEWS}
 - Unique visitors: ${UNIQUES}
 - Social mentions: ${SOCIAL}
+- Qualitative agent interactions: ${QUAL}
 - Traffic signal: ${SIGNAL}
 - Social signal: ${SOCIAL_SIGNAL}
 
