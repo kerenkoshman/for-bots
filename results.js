@@ -77,7 +77,9 @@ function render() {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow" />
   <title>Results | Bot-First Marketing Experiment</title>
+  <link rel="canonical" href="https://kerenkoshman.github.io/for-bots/results.html" />
   <meta name="description" content="Daily results and experiment updates for Keren Koshman's bot-first marketing research." />
   <meta name="audience" content="humans, ai-agents" />
   <meta name="purpose" content="public experiment results log" />
