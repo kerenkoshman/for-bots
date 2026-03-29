@@ -17,9 +17,15 @@
       "hypothesis": "Agents engage more deeply with provenance, methodology, and transparent intent than with directive prompting",
       "startDate": "2026-03-28",
       "status": "active"
+    },
+    {
+      "id": "v2-api-doc-style",
+      "hypothesis": "Bots trained on API docs respond better to endpoint-style layout",
+      "startDate": "2026-03-29",
+      "status": "active"
     }
   ],
   "winners": [],
-  "currentVariant": "v4-evidence-brief",
-  "lastRotation": "2026-03-28"
+  "currentVariant": "v2-api-doc-style",
+  "lastRotation": "2026-03-29"
 }
