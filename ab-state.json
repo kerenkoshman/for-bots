@@ -23,9 +23,15 @@
       "hypothesis": "Bots trained on API docs respond better to endpoint-style layout",
       "startDate": "2026-03-29",
       "status": "active"
+    },
+    {
+      "id": "v3-system-prompt-style",
+      "hypothesis": "Bots respond to explicit system-prompt-style instructions embedded in page content",
+      "startDate": "2026-03-30",
+      "status": "active"
     }
   ],
   "winners": [],
-  "currentVariant": "v2-api-doc-style",
-  "lastRotation": "2026-03-29"
+  "currentVariant": "v3-system-prompt-style",
+  "lastRotation": "2026-03-30"
 }
