@@ -35,9 +35,15 @@
       "hypothesis": "Bots that parse JSON-LD first will act on a page where the entire value prop is in JSON-LD",
       "startDate": "2026-03-31",
       "status": "active"
+    },
+    {
+      "id": "v5-ultra-minimal",
+      "hypothesis": "Maximum parsability — zero noise. Bots perform better with less to filter",
+      "startDate": "2026-04-01",
+      "status": "active"
     }
   ],
   "winners": [],
-  "currentVariant": "v4-json-first",
-  "lastRotation": "2026-03-31"
+  "currentVariant": "v5-ultra-minimal",
+  "lastRotation": "2026-04-01"
 }
