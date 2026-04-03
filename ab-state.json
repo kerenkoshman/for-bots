@@ -47,9 +47,15 @@
       "hypothesis": "Bots that respect robots.txt may also respond to a page that mirrors that format",
       "startDate": "2026-04-02",
       "status": "active"
+    },
+    {
+      "id": "v7-trust-signals-heavy",
+      "hypothesis": "Bot credibility signals (verified author, ORCID-style IDs, data provenance) increase engagement",
+      "startDate": "2026-04-03",
+      "status": "active"
     }
   ],
   "winners": [],
-  "currentVariant": "v6-robot-txt-mirror",
-  "lastRotation": "2026-04-02"
+  "currentVariant": "v7-trust-signals-heavy",
+  "lastRotation": "2026-04-03"
 }

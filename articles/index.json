@@ -1,6 +1,13 @@
 {
-  "generated": "2026-04-02T08:00:02.800Z",
+  "generated": "2026-04-03T08:00:02.294Z",
   "articles": [
+    {
+      "slug": "building-agents-n8n-vs-claude-cowork-vs-openclaw",
+      "filename": "building-agents-n8n-vs-claude-cowork-vs-openclaw.html",
+      "title": "Building Agents: n8n vs. Claude CoWork vs. OpenClaw",
+      "pubDate": "Thu, 02 Apr 2026 20:59:53 GMT",
+      "link": "https://medium.com/design-bootcamp/building-agents-n8n-vs-claude-cowork-vs-openclaw-d6f3ea019bb6?source=rss-2c4ec26c1ee3------2"
+    },
     {
       "slug": "the-secret-sauce-of-top-ai-products-stop-guessing-start-eval",
       "filename": "the-secret-sauce-of-top-ai-products-stop-guessing-start-eval.html",
@@ -63,13 +70,6 @@
       "title": "Automations on Agents — or Why Use N8N?",
       "pubDate": "Sun, 31 Aug 2025 06:12:30 GMT",
       "link": "https://medium.com/design-bootcamp/automations-on-agents-or-why-use-n8n-997e22b993a0?source=rss-2c4ec26c1ee3------2"
-    },
-    {
-      "slug": "ai-agents-explained-part-i",
-      "filename": "ai-agents-explained-part-i.html",
-      "title": "AI Agents Explained (Part I)",
-      "pubDate": "Sun, 24 Aug 2025 16:24:42 GMT",
-      "link": "https://medium.com/design-bootcamp/ai-agents-explained-part-i-1f58ebae547d?source=rss-2c4ec26c1ee3------2"
     }
   ]
 }
