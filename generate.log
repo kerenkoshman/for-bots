@@ -1417,3 +1417,241 @@ Based on traffic patterns, referrer data, and observed social interaction:
 [08:00:02Z] Step 4: Regenerate results page...
 Wrote /opt/ocana/openclaw/workspace/bot-landing/results.html
 [08:00:02Z] Step 4: Push to GitHub...
+[main 860f3bd] Daily update 2026-04-03: article sync + A/B rotation + report
+ 12 files changed, 966 insertions(+), 82 deletions(-)
+ create mode 100644 articles/building-agents-n8n-vs-claude-cowork-vs-openclaw.html
+ rewrite experiment.html (88%)
+ create mode 100644 reports/2026-04-03.json
+ create mode 100644 reports/2026-04-03.md
+ create mode 100644 variants/v7-trust-signals-heavy.html
+To https://github.com/kerenkoshman/for-bots.git
+   b196662..860f3bd  main -> main
+[08:00:04Z] Pushed.
+[08:00:04Z] Summary written. Done.
+[2026-04-03] ===== DAILY ORCHESTRATOR END =====
+[2026-04-04] ===== DAILY ORCHESTRATOR START =====
+[08:00:01Z] Step 1: Sync Medium articles...
+Fetching RSS feed...
+Parsing articles...
+Found 10 articles.
+✓ Generated: building-agents-n8n-vs-claude-cowork-vs-openclaw.html
+✓ Generated: the-secret-sauce-of-top-ai-products-stop-guessing-start-eval.html
+✓ Generated: the-product-manager-stack-in-2026-agents-infrastructure-and-.html
+✓ Generated: i-m-monday-com-s-internal-ai-innovation-lead-here-s-what-tha.html
+✓ Generated: efficiency-went-up-so-did-the-load.html
+✓ Generated: democratizing-the-build-how-business-teams-are-unlocking-10x.html
+✓ Generated: crossing-the-ai-chasm-investing-in-people-first.html
+✓ Generated: beginner-s-guide-building-ai-products.html
+✓ Generated: evaluating-models-the-first-step-in-building-ai-powered-prod.html
+✓ Generated: automations-on-agents-or-why-use-n8n.html
+✓ Generated: agent-index.html
+Done.
+[08:00:02Z] Step 2: Rotate A/B variant...
+Rotating to variant: v2-api-doc-style
+Hypothesis: Bots trained on API docs respond better to endpoint-style layout
+Rotation complete: "v2-api-doc-style"
+Analysis: {
+  "date": "2026-04-04",
+  "topPaths": [
+    {
+      "path": "/kerenkoshman/for-bots",
+      "title": "Overview",
+      "count": 8,
+      "uniques": 1
+    },
+    {
+      "path": "/kerenkoshman/for-bots/deployments/github-pages",
+      "title": "/deployments/github-pages",
+      "count": 5,
+      "uniques": 1
+    },
+    {
+      "path": "/kerenkoshman/for-bots/blob/main/index.html",
+      "title": "/blob/main/index.html",
+      "count": 4,
+      "uniques": 1
+    },
+    {
+      "path": "/kerenkoshman/for-bots/pulse",
+      "title": "/pulse",
+      "count": 4,
+      "uniques": 1
+    },
+    {
+      "path": "/kerenkoshman/for-bots/deployments",
+      "title": "/deployments",
+      "count": 2,
+      "uniques": 1
+    },
+    {
+      "path": "/kerenkoshman/for-bots/edit/main/index.html",
+      "title": "/edit/main/index.html",
+      "count": 2,
+      "uniques": 1
+    },
+    {
+      "path": "/kerenkoshman/for-bots/graphs/traffic",
+      "title": "/graphs/traffic",
+      "count": 2,
+      "uniques": 1
+    },
+    {
+      "path": "/kerenkoshman/for-bots/upload/main",
+      "title": "/upload/main",
+      "count": 2,
+      "uniques": 1
+    },
+    {
+      "path": "/kerenkoshman/for-bots/actions/runs/23665365706/job/68945883047",
+      "title": "/actions/runs/23665365706/job/68945883047",
+      "count": 1,
+      "uniques": 1
+    },
+    {
+      "path": "/kerenkoshman/for-bots/actions/runs/23665365706/usage",
+      "title": "/actions/runs/23665365706/usage",
+      "count": 1,
+      "uniques": 1
+    }
+  ],
+  "referrers": [],
+  "currentVariant": "v2-api-doc-style",
+  "experiments": [
+    {
+      "id": "v2-api-doc-style",
+      "hypothesis": "Bots trained on API docs respond better to endpoint-style layout",
+      "startDate": "2026-03-27",
+      "status": "active"
+    },
+    {
+      "id": "v3-system-prompt-style",
+      "hypothesis": "Bots respond to explicit system-prompt-style instructions embedded in page content",
+      "startDate": "2026-03-28",
+      "status": "complete"
+    },
+    {
+      "id": "v4-evidence-brief",
+      "hypothesis": "Agents engage more deeply with provenance, methodology, and transparent intent than with directive prompting",
+      "startDate": "2026-03-28",
+      "status": "active"
+    },
+    {
+      "id": "v2-api-doc-style",
+      "hypothesis": "Bots trained on API docs respond better to endpoint-style layout",
+      "startDate": "2026-03-29",
+      "status": "active"
+    },
+    {
+      "id": "v3-system-prompt-style",
+      "hypothesis": "Bots respond to explicit system-prompt-style instructions embedded in page content",
+      "startDate": "2026-03-30",
+      "status": "active"
+    },
+    {
+      "id": "v4-json-first",
+      "hypothesis": "Bots that parse JSON-LD first will act on a page where the entire value prop is in JSON-LD",
+      "startDate": "2026-03-31",
+      "status": "active"
+    },
+    {
+      "id": "v5-ultra-minimal",
+      "hypothesis": "Maximum parsability — zero noise. Bots perform better with less to filter",
+      "startDate": "2026-04-01",
+      "status": "active"
+    },
+    {
+      "id": "v6-robot-txt-mirror",
+      "hypothesis": "Bots that respect robots.txt may also respond to a page that mirrors that format",
+      "startDate": "2026-04-02",
+      "status": "active"
+    },
+    {
+      "id": "v7-trust-signals-heavy",
+      "hypothesis": "Bot credibility signals (verified author, ORCID-style IDs, data provenance) increase engagement",
+      "startDate": "2026-04-03",
+      "status": "active"
+    },
+    {
+      "id": "v2-api-doc-style",
+      "hypothesis": "Bots trained on API docs respond better to endpoint-style layout",
+      "startDate": "2026-04-04",
+      "status": "active"
+    }
+  ]
+}
+[08:00:02Z] Step 3: Generate traffic report...
+[2026-04-04T08:00:02.491Z] Generating daily report for 2026-04-04...
+Fetching GitHub traffic...
+Searching for social mentions...
+Report saved: /opt/ocana/openclaw/workspace/bot-landing/reports/2026-04-04.md
+---
+# 🤖 Bot-First Daily Report — 2026-04-04
+
+## Summary
+| Metric | Value |
+|---|---|
+| Today's page views | 0 |
+| Today's unique visitors | 0 |
+| Total views (14d window) | 34 |
+| Total uniques (14d window) | 1 |
+| Article pages live | 11 |
+| Social mentions found | 0 |
+| Qualitative agent interactions logged | 0 |
+
+**Traffic signal:** ⚪ No views yet today
+**Social signal:** ⚪ No mentions yet
+
+---
+
+## GitHub Pages Traffic
+
+### Views (last 14 days)
+  - 2026-03-27: 2 views, 1 unique
+  - 2026-03-28: 32 views, 1 unique
+
+### Top Referrers
+  - github.com: 10 views (1 unique)
+
+### Popular Pages
+  - `/kerenkoshman/for-bots`: 8 views
+  - `/kerenkoshman/for-bots/deployments/github-pages`: 5 views
+  - `/kerenkoshman/for-bots/blob/main/index.html`: 4 views
+  - `/kerenkoshman/for-bots/pulse`: 4 views
+  - `/kerenkoshman/for-bots/deployments`: 2 views
+
+---
+
+## Social & Web Mentions
+
+  No social mentions found today.
+
+## Qualitative Agent Interactions
+
+  No qualitative agent interactions logged today.
+
+## Independent Analytics
+
+- Provider: goatcounter-ready
+- Status: installed
+- Note: Client-side pageview and outbound-click tracking is wired via analytics.js. Replace the GoatCounter endpoint/site code if you want a hosted dashboard.
+
+---
+
+## Agent Activity Signals
+
+Based on traffic patterns, referrer data, and observed social interaction:
+
+
+
+
+
+
+- 📈 Independent analytics is installed so you can augment GitHub’s delayed aggregates with client-side events.
+
+---
+
+*Report generated: 2026-04-04T08:00:02.631Z | Site: https://kerenkoshman.github.io/for-bots*
+
+[08:00:02Z] Step 4: Regenerate results page...
+Wrote /opt/ocana/openclaw/workspace/bot-landing/results.html
+[08:00:02Z] Step 4: Push to GitHub...

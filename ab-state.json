@@ -53,9 +53,15 @@
       "hypothesis": "Bot credibility signals (verified author, ORCID-style IDs, data provenance) increase engagement",
       "startDate": "2026-04-03",
       "status": "active"
+    },
+    {
+      "id": "v2-api-doc-style",
+      "hypothesis": "Bots trained on API docs respond better to endpoint-style layout",
+      "startDate": "2026-04-04",
+      "status": "active"
     }
   ],
   "winners": [],
-  "currentVariant": "v7-trust-signals-heavy",
-  "lastRotation": "2026-04-03"
+  "currentVariant": "v2-api-doc-style",
+  "lastRotation": "2026-04-04"
 }
