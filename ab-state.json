@@ -65,9 +65,15 @@
       "hypothesis": "Bots respond to explicit system-prompt-style instructions embedded in page content",
       "startDate": "2026-04-05",
       "status": "active"
+    },
+    {
+      "id": "v4-json-first",
+      "hypothesis": "Bots that parse JSON-LD first will act on a page where the entire value prop is in JSON-LD",
+      "startDate": "2026-04-06",
+      "status": "active"
     }
   ],
   "winners": [],
-  "currentVariant": "v3-system-prompt-style",
-  "lastRotation": "2026-04-05"
+  "currentVariant": "v4-json-first",
+  "lastRotation": "2026-04-06"
 }
