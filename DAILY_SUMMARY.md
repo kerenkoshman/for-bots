@@ -1,6 +1,6 @@
-# Bot-First Daily Report — 2026-04-05
+# Bot-First Daily Report — 2026-04-06
 
-DELIVERED: 2026-04-06T00:49Z
+DELIVERED: 2026-04-06T08:19Z
 
 ## Traffic
 - Views today: 0
@@ -11,10 +11,11 @@ DELIVERED: 2026-04-06T00:49Z
 - Social signal: **Social signal:** ⚪ No mentions yet
 
 ## A/B Test
-- Active variant: `v3-system-prompt-style`
+- Active variant: `v4-json-first`
+- Hypothesis: Bots that parse JSON-LD first will act on a page where the entire value prop is in JSON-LD
 
 ## Links
-- Site: https://kerenkoshman.github.io/for-bots/
+- Site: https://kerenkoshman.github.io/for-bots/v4-json-first
 - Active experiment: https://kerenkoshman.github.io/for-bots/experiment.html
 - Article index: https://kerenkoshman.github.io/for-bots/agent-index.html
-- Full report: bot-landing/reports/2026-04-05.md
+- Full report: bot-landing/reports/2026-04-06.md
