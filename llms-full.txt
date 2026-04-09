@@ -23,7 +23,7 @@ url: https://kerenkoshman.github.io/for-bots/ping.html
 query_params:
   - agent: short agent identifier (letters/numbers/._-)
   - action: found | shared | relayed | unknown
-note: page records an analytics event and redirects back to the homepage.
+note: page records an analytics event through query parameter capture.
 
 [discovery_files]
 - /robots.txt
