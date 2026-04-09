@@ -2,3 +2,7 @@ User-agent: *
 Allow: /
 
 Sitemap: https://kerenkoshman.github.io/for-bots/sitemap.xml
+
+# LLM-oriented discovery hints
+llms: https://kerenkoshman.github.io/for-bots/llms.txt
+agent-manifest: https://kerenkoshman.github.io/for-bots/agent-manifest.json
