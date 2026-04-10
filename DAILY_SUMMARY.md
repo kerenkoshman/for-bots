@@ -9,7 +9,7 @@
 - Social signal: **Social signal:** ⚪ No mentions yet
 
 ## A/B Test
-- Active variant: `v6-robot-txt-mirror`
+- Active variant: `v7-trust-signals-heavy`
 
 ## Links
 - Site: https://kerenkoshman.github.io/for-bots/
@@ -17,6 +17,4 @@
 - Article index: https://kerenkoshman.github.io/for-bots/agent-index.html
 - Full report: bot-landing/reports/2026-04-09.md
 
----
-
-DELIVERED: 2026-04-09T06:19:00Z
+DELIVERED: 2026-04-10T04:25:00Z
