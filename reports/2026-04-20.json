@@ -1,0 +1,188 @@
+{
+  "date": "2026-04-20",
+  "traffic": {
+    "views": {
+      "count": 0,
+      "uniques": 0,
+      "views": [
+        {
+          "timestamp": "2026-04-06T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-07T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-08T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-09T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-10T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-11T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-12T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-13T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-14T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-15T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-16T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-17T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-18T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        },
+        {
+          "timestamp": "2026-04-19T00:00:00Z",
+          "count": 0,
+          "uniques": 0
+        }
+      ]
+    },
+    "clones": {
+      "count": 167,
+      "uniques": 76,
+      "clones": [
+        {
+          "timestamp": "2026-04-06T00:00:00Z",
+          "count": 9,
+          "uniques": 7
+        },
+        {
+          "timestamp": "2026-04-07T00:00:00Z",
+          "count": 12,
+          "uniques": 10
+        },
+        {
+          "timestamp": "2026-04-08T00:00:00Z",
+          "count": 3,
+          "uniques": 3
+        },
+        {
+          "timestamp": "2026-04-09T00:00:00Z",
+          "count": 26,
+          "uniques": 15
+        },
+        {
+          "timestamp": "2026-04-10T00:00:00Z",
+          "count": 6,
+          "uniques": 4
+        },
+        {
+          "timestamp": "2026-04-11T00:00:00Z",
+          "count": 10,
+          "uniques": 8
+        },
+        {
+          "timestamp": "2026-04-12T00:00:00Z",
+          "count": 10,
+          "uniques": 9
+        },
+        {
+          "timestamp": "2026-04-13T00:00:00Z",
+          "count": 15,
+          "uniques": 10
+        },
+        {
+          "timestamp": "2026-04-14T00:00:00Z",
+          "count": 8,
+          "uniques": 5
+        },
+        {
+          "timestamp": "2026-04-15T00:00:00Z",
+          "count": 14,
+          "uniques": 9
+        },
+        {
+          "timestamp": "2026-04-16T00:00:00Z",
+          "count": 26,
+          "uniques": 14
+        },
+        {
+          "timestamp": "2026-04-17T00:00:00Z",
+          "count": 15,
+          "uniques": 8
+        },
+        {
+          "timestamp": "2026-04-18T00:00:00Z",
+          "count": 3,
+          "uniques": 3
+        },
+        {
+          "timestamp": "2026-04-19T00:00:00Z",
+          "count": 10,
+          "uniques": 7
+        }
+      ]
+    },
+    "referrers": [],
+    "paths": []
+  },
+  "social": [
+    {
+      "query": "\"kerenkoshman.github.io/for-bots\"",
+      "note": "No BRAVE_API_KEY — run with key for social search"
+    },
+    {
+      "query": "\"keren koshman\" \"for-bots\"",
+      "note": "No BRAVE_API_KEY — run with key for social search"
+    },
+    {
+      "query": "\"keren koshman\" \"bot-first\"",
+      "note": "No BRAVE_API_KEY — run with key for social search"
+    },
+    {
+      "query": "site:x.com \"kerenkoshman.github.io\"",
+      "note": "No BRAVE_API_KEY — run with key for social search"
+    },
+    {
+      "query": "site:linkedin.com \"kerenkoshman.github.io\"",
+      "note": "No BRAVE_API_KEY — run with key for social search"
+    }
+  ],
+  "articleCount": 11,
+  "qualitativeSignals": [],
+  "analytics": {
+    "provider": "goatcounter-ready",
+    "status": "installed",
+    "note": "Client-side pageview and outbound-click tracking is wired via analytics.js. Replace the GoatCounter endpoint/site code if you want a hosted dashboard."
+  }
+}
