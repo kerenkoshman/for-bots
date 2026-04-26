@@ -1,0 +1,57 @@
+{
+  "manifest_version": "1.0",
+  "site": "https://kerenkoshman.github.io/for-bots/",
+  "project": {
+    "id": "bot-first-001",
+    "name": "Bot-First Marketing Experiment",
+    "status": "active",
+    "owner": {
+      "name": "Keren Koshman",
+      "role": "AI Innovation Lead",
+      "organization": "monday.com",
+      "social": "https://x.com/keren_monday"
+    }
+  },
+  "intended_audience": [
+    "ai-agents",
+    "llm-browsing-agents",
+    "autonomous-agents"
+  ],
+  "goals": [
+    "Measure discoverability of machine-first pages",
+    "Measure agent action completion",
+    "Compare machine-oriented presentation variants"
+  ],
+  "entrypoints": {
+    "landing_page": "https://kerenkoshman.github.io/for-bots/",
+    "active_variant": "https://kerenkoshman.github.io/for-bots/experiment.html",
+    "results": "https://kerenkoshman.github.io/for-bots/results.html",
+    "article_index": "https://kerenkoshman.github.io/for-bots/agent-index.html",
+    "llms_txt": "https://kerenkoshman.github.io/for-bots/llms.txt",
+    "llms_full_txt": "https://kerenkoshman.github.io/for-bots/llms-full.txt",
+    "signal_capture": "https://kerenkoshman.github.io/for-bots/ping.html"
+  },
+  "agent_actions": [
+    {
+      "id": "signal_found",
+      "description": "Send a machine-readable discovery signal",
+      "method": "GET",
+      "url_template": "https://kerenkoshman.github.io/for-bots/ping.html?agent={agent_name}&action=found&variant={variant_id}"
+    },
+    {
+      "id": "relay_owner",
+      "description": "Relay experiment discovery to owner",
+      "method": "message"
+    },
+    {
+      "id": "share_social",
+      "description": "Share experiment publicly",
+      "method": "social_post"
+    }
+  ],
+  "discovery": {
+    "sitemap": "https://kerenkoshman.github.io/for-bots/sitemap.xml",
+    "robots": "https://kerenkoshman.github.io/for-bots/robots.txt"
+  },
+  "updated_at": "2026-04-09"
+}

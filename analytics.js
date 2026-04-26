@@ -1,5 +1,8 @@
 (function(){
   var endpoint='https://api.goatcounter.com/count';
+  function safe(v){
+    return String(v || '').toLowerCase().replace(/[^a-z0-9._-]/g, '').slice(0, 64) || 'unknown';
+  }
   function withRef(url){
     try {
       var u=new URL(url, location.href);
@@ -32,7 +35,17 @@
       fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body,keepalive:true}).catch(function(){});
     }
   }
+  function captureAgentSignal(){
+    try {
+      var sp = new URLSearchParams(location.search);
+      var action = sp.get('action');
+      var agent = sp.get('agent');
+      if (!action && !agent) return;
+      count('/__agent-signal?action=' + encodeURIComponent(safe(action || 'found')) + '&agent=' + encodeURIComponent(safe(agent || 'unknown')), 'agent-signal', true);
+    } catch (e) {}
+  }
   count(withRef(location.pathname + location.search + location.hash), document.title, false);
+  captureAgentSignal();
   document.addEventListener('click', function(e){
     var a=e.target && e.target.closest ? e.target.closest('a[href]') : null;
     if(!a) return;
