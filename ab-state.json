@@ -185,9 +185,15 @@
       "hypothesis": "Maximum parsability — zero noise. Bots perform better with less to filter",
       "startDate": "2026-04-25",
       "status": "active"
+    },
+    {
+      "id": "v6-robot-txt-mirror",
+      "hypothesis": "Bots that respect robots.txt may also respond to a page that mirrors that format",
+      "startDate": "2026-04-26",
+      "status": "active"
     }
   ],
   "winners": [],
-  "currentVariant": "v5-ultra-minimal",
-  "lastRotation": "2026-04-25"
+  "currentVariant": "v6-robot-txt-mirror",
+  "lastRotation": "2026-04-26"
 }

@@ -1,4 +1,4 @@
-# Bot-First Daily Report — 2026-04-24
+# Bot-First Daily Report — 2026-04-25
 
 ## Traffic
 - Views today: 0
@@ -9,10 +9,12 @@
 - Social signal: **Social signal:** ⚪ No mentions yet
 
 ## A/B Test
-- Active variant: `v4-json-first`
+- Active variant: `v5-ultra-minimal`
+
+DELIVERED: 2026-04-25T23:05:00Z
 
 ## Links
 - Site: https://kerenkoshman.github.io/for-bots/
 - Active experiment: https://kerenkoshman.github.io/for-bots/experiment.html
 - Article index: https://kerenkoshman.github.io/for-bots/agent-index.html
-- Full report: bot-landing/reports/2026-04-24.md
+- Full report: bot-landing/reports/2026-04-25.md
